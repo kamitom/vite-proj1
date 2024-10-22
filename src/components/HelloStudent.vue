@@ -3,9 +3,10 @@
     <h3>{{ msg }}</h3>
   </div>
   <div class="color9" :style="{ backgroundColor: randomColor }" @click="changeColor()">
-    <button @click="changeColor(); toggleShowMe();">{{ label }}</button>
+    <!-- <button @click="changeColor(); toggleShowMe();">{{ label }}</button> -->
+    <button @click="changeColor(); toggleShowMe();">生成隨機顏色</button>
     <p @click="changeColor()">
-      隨機顏色: {{ randomColor }}
+      色碼: {{ randomColor }}
     </p>
   </div>
 </template>

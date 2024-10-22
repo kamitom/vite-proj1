@@ -1,15 +1,17 @@
 <script setup>
   import HelloWorld from './components/HelloWorld.vue'
   import HelloStudent from './components/HelloStudent.vue'
+  import HelloStore from './components/HelloStore.vue'
 </script>
 
 <template>
   <div>
-    <!-- <h1>hello, rossi.black</h1> -->
+    <!-- <h3>hello, rossi.black</h3> -->
   </div>
   <!-- <HelloWorld msg="Vite + Vue" /> -->
   <!-- <HelloStudent msg="rossi BLACK" /> -->
-  <HelloStudent />
+  <!-- <HelloStudent msg="有一種藍, 台東藍..." /> -->
+  <HelloStore />
 </template>
 
 <style scoped></style>
