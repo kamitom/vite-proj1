@@ -8,6 +8,7 @@
     <!-- <h1>hello, rossi.black</h1> -->
   </div>
   <!-- <HelloWorld msg="Vite + Vue" /> -->
+  <!-- <HelloStudent msg="rossi BLACK" /> -->
   <HelloStudent />
 </template>
 
