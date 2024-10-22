@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="testMain">
-      <p>hello, song</p>
-      <button @click="changeColor2()">生成隨機顏色</button>
+      <p>hello, 什麼是Vuex?</p>
+      <button @click="changeBgColor()">生成隨機顏色</button>
     </div>
   </div>
 </template>
@@ -19,13 +19,19 @@
   })
 
 
-  const changeColor2 = () => {
+  const changeBgColor = () => {
     store.commit('randomColor');
   }
 
 </script>
 
 <style scoped>
+
+  p {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+  }
 
   .container {
     display: grid;
