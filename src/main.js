@@ -35,6 +35,9 @@ const store = createStore({
     addNum(state) {
       state.num++;
     },
+    addArr(state) {
+      state.arr.push(state.arr.length + 1);
+    },
   },
 });
 

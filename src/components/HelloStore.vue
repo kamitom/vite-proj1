@@ -4,7 +4,10 @@
       <p>hello, 什麼是Vuex?</p>
       <button @click="changeBgColor()">生成隨機顏色</button>
       <div>
-        <span>{{ person }}</span>
+        <span>{{ arr }}</span>
+        <div>
+          <button @click="addArr1()">追加元素</button>
+        </div>
       </div>
       <div>
         <button @click="addNum1()">+1</button>
@@ -24,6 +27,7 @@
 
   const num = computed(() => store.state.num);
   const person = computed(() => store.state.person);
+  const arr = computed(() => store.state.arr);
 
   const bgColor = computed(() => {
     const colors = store.state.color;
@@ -37,6 +41,10 @@
 
   const addNum1 = () => {
     store.commit('addNum');
+  }
+
+  const addArr1 = () => {
+    store.commit('addArr');
   }
 
 </script>
