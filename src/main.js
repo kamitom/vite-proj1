@@ -29,8 +29,8 @@ const store = createStore({
         Math.floor(Math.random() * 255),
       ];
     },
-    multiply(state) {
-      state.num *= 2;
+    multiply(state, data) {
+      state.num *= data;
     },
     addNum(state) {
       state.num++;

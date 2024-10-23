@@ -12,7 +12,14 @@
       <div>
         <button @click="addNum1()">+1</button>
         <p>
-          累加1: {{ num }}
+          累加: {{ num }}
+        </p>
+      </div>
+      <div>
+        <input type="text" v-model="txt_value">
+        <button @click="multiply1(txt_value)">*{{ txt_value }}</button>
+        <p>
+          {{ num }}
         </p>
       </div>
     </div>
@@ -46,6 +53,12 @@
   const addArr1 = () => {
     store.commit('addArr');
   }
+
+  const multiply1 = (data) => {
+    store.commit('multiply', data);
+  }
+
+  const txt_value = ref(1);
 
 </script>
 
