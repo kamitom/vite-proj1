@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1 v-if="loading">非同步取得遠端資料</h1>
     <div v-if="loading" class="isloading">Loading...</div>
     <div v-else>
       <p v-for="player in new_players" :key="player.id">
