@@ -2,10 +2,13 @@ import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
 import { createStore } from 'vuex';
+import { mlb_players } from './data/mlb_players';
 
 const store = createStore({
   state() {
     return {
+      isLoading: false,
+      mlb_players: [],
       count: 0,
       color: [209, 97, 97],
       num: 1,
@@ -35,6 +38,9 @@ const store = createStore({
     },
   },
   mutations: {
+    setLoading(state, loading) {
+      state.isLoading = loading;
+    },
     increment(state) {
       state.count++;
     },
@@ -53,6 +59,18 @@ const store = createStore({
     },
     addArr(state) {
       state.arr.push(state.arr.length + 1);
+    },
+    loadMLBplayers(state, payloads) {
+      state.mlb_players = payloads.mlb_players;
+    },
+  },
+  actions: {
+    fetchMLBplayers({ commit }) {
+      commit('setLoading', true);
+      setTimeout(() => {
+        commit('loadMLBplayers', { mlb_players: mlb_players });
+        commit('setLoading', false);
+      }, 5000);
     },
   },
 });
