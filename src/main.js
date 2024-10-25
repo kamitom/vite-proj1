@@ -16,7 +16,23 @@ const store = createStore({
         age: 25,
       },
       isRich: false,
+      users: [
+        { id: 1, name: 'John Doe', age: 25 },
+        { id: 2, name: 'Jane Doe', age: 24 },
+        { id: 3, name: 'John Smith', age: 30 },
+        { id: 4, name: 'Jane Smith', age: 28 },
+        { id: 5, name: 'John Brown', age: 35 },
+        { id: 6, name: 'Jane Brown', age: 45 },
+      ],
     };
+  },
+  getters: {
+    usersOlderThan26: (state) => {
+      return state.users.filter((user) => user.age > 26);
+    },
+    numberOfUsersOlderThan26: (state, getters) => {
+      return getters.usersOlderThan26.length;
+    },
   },
   mutations: {
     increment(state) {
